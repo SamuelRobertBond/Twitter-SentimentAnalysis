@@ -1,3 +1,3 @@
 import TweetRetriever
 
-TweetRetriever.mine_tweets("Baseball")
+TweetRetriever.mine_tweets("#Quotes")

@@ -19,9 +19,8 @@ def record_tweets(tweet_type, term, tweets):
         cur = con.cursor()
 
         for tweet in tweets:
-            tweet_text = "".join(tweet.text).encode("utf-8").strip()
-            tweet_text = pattern.sub('', tweet_text)
-            tweet_text = tweet_text.replace("\"", '')
+            tweet_text = pattern.sub('', tweet.text)
+            tweet_text = tweet_text.replace("\"", '""')
 
             cur.execute('INSERT INTO {tn} VALUES ("{v1}","{v2}","{v3}","{v4}")'.
                         format(tn=table_name, v1=tweet_type, v2=term, v3=time.strftime("%x"), v4=tweet_text))
