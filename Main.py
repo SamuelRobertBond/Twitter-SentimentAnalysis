@@ -1,4 +1,3 @@
 import TweetRetriever
 
-TweetRetriever.mine_tweets("Programmer")
-
+TweetRetriever.mine_tweets("Baseball")

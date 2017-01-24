@@ -31,13 +31,6 @@ def mine_tweets(search_term):
             print(e.message)
             break
 
-    for tweet in tweets:
-        DatabaseManager.record_tweet("Search", "Programmer", tweets.text)
+    DatabaseManager.record_tweets("String", search_term, tweets)
 
     return
-
-
-
-
-
-
